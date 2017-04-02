@@ -1,0 +1,204 @@
+body {
+  font-family: "open-sans", "Open Sans", "Arial", "Helvetica", sans-serif;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5F6F8;
+  color: #666666;
+  font-size: 16px;
+  padding: 1.5% 10% 1.5% 10%;
+}
+
+.navItem {
+  flex-basis: auto;
+}
+
+#tryBtn {
+  background-color: #FFC223;
+  color: #F5F6F8;
+  border: none;
+  font-size: 16px;
+  padding: 1%;
+}
+
+.container {
+  padding: 0 10% 0 10%;
+}
+
+#mainAbout {
+  display: flex;
+
+}
+
+#logoCloud {
+  order: 2;
+  float: none;
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+}
+
+h1 {
+  font-family: 'Open Sans Light', 'open-sans', 'Open Sans', 'Arial', 'Helvetica';
+  font-size: 30px;
+  color: #333333;
+}
+
+p {
+  color: #666666;
+}
+
+.listDescription {
+  padding-right: 10%;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.info {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.bigImage {
+  float: right;
+  max-height: 500px;
+  max-width: 500px;
+  margin-top: 30px;
+}
+
+#vpnActions {
+  display: flex;
+  flex-flow: row;
+  margin-top: 3%;
+}
+
+#vpnActions > #infrastructure {
+  flex: 1 6 20%;
+  order: 1;
+}
+
+#vpnActions > #thirdParty {
+  flex: 1 6 20%;
+  order: 2;
+}
+
+#vpnActions > #vulnerabilities {
+  flex: 1 6 20%;
+  order: 3;
+}
+
+.action {
+  display: flex;
+  flex-flow: column;
+  padding-right: 5%;
+  align-items: flex-start;
+}
+
+.actionDetail {
+  margin-top: 20px;
+}
+/*strong and p tags in .action span*/
+
+ul, li {
+  margin-left: 0;
+  padding-left: 0;
+} 
+/*remove the indent on the ul tags*/
+
+li {
+  margin-top: 20px;
+  list-style-position: inside;
+}
+
+#advantagesList {
+  list-style-image: url('./assets/checkmark.svg')
+}
+
+footer {
+  background-color: #3A3D40;
+  color: #DDDDDD;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 15% 5% 15%;
+}
+
+#social {
+  display: flex;
+  align-items: center;
+}
+
+@media all and (max-width: 800px) {
+  /*#mainLogo {
+    display: block;
+  }*/
+  
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerItem {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .bigImage {
+    float: none;
+    display:block;
+    margin:auto;
+  }
+
+  #mainAbout {
+    flex-flow: column;
+  }
+
+  #logoCloud {
+    order: 1;
+  }
+
+  #aboutDetail {
+    order: 2;
+  }
+}
+
+@media all and (max-width: 550px) {
+  nav {
+    display: flex;
+    flex-flow: column;
+  }
+
+
+}
+
+@media all and (max-width: 450px) {
+  #vpnActions {
+    flex-direction: column
+  }
+
+  .action {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .actionDetail {
+    margin-left: 20px;
+  }
+
+  li {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .listDescription {
+    text-align: center;
+  }
+}
