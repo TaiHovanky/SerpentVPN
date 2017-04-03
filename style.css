@@ -20,7 +20,7 @@ nav {
 }
 
 #tryBtn {
-  width: 15%;
+  width: 20%;
   background-color: #FFC223;
   color: white;
   border: none;
@@ -187,8 +187,10 @@ footer {
 
 @media all and (max-width: 950px) {
   footer {
-    flex-direction: column;
-    text-align: center;
+    /*flex-direction: column;
+    text-align: center;*/
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .footerItem {
@@ -197,9 +199,6 @@ footer {
 
   #social {
     width: 33%;
-    /*white-space: wrap;*/
-    display: flex;
-    flex-direction: column;
   }
 
   #btns {
@@ -254,7 +253,17 @@ footer {
 
   #aboutDetail {
     order: 2;
-  }  
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #social {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width: 650px) {
@@ -294,9 +303,7 @@ footer {
   #social {
     width: 60%;
   }
-}
 
-@media all and (max-width: 450px) {
   #vpnActions {
     flex-direction: column
   }
@@ -314,6 +321,10 @@ footer {
     margin-left: 20px;
   }
 }
+
+/*@media all and (max-width: 450px) {
+  
+}*/
 
 @media all and (max-width: 380px) {
   .menuItems {
