@@ -9,8 +9,10 @@ nav {
   align-items: center;
   background-color: #F5F6F8;
   color: #666666;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 600;
   font-size: 16px;
-  padding: 1.5% 2.5% 1.5% 5%;
+  padding: 1.5% 1% 1.5% 5%;
 }
 
 .navItem {
@@ -18,11 +20,13 @@ nav {
 }
 
 #tryBtn {
+  width: 15%;
   background-color: #FFC223;
-  color: #F5F6F8;
+  color: white;
   border: none;
   font-size: 16px;
-  padding: 1%;
+  padding: 1% 2%;
+  white-space: nowrap;
 }
 
 .menuItems {
@@ -56,19 +60,29 @@ nav {
 }
 
 h1 {
-  font-family: 'Open Sans Light', 'open-sans', 'Open Sans', 'Arial', 'Helvetica';
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 300;
   font-size: 30px;
   color: #333333;
 }
 
 p {
   color: #666666;
+  font-weight: 400;
 }
 
 .listDescription {
-  padding-right: 10%;
+  padding-right: 32%;
   font-size: 18px;
   margin-bottom: 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.actionDescription {
+  padding-right: 18%;
 }
 
 .info {
@@ -78,9 +92,8 @@ p {
 
 .bigImage {
   float: right;
-  max-height: 500px;
-  max-width: 500px;
   margin-top: 30px;
+  padding-right: 11%;
 }
 
 #vpnActions {
@@ -116,15 +129,13 @@ p {
 }
 /*strong and p tags in .action span*/
 
-ul, li {
-  margin-left: 0;
-  padding-left: 0;
-} 
-/*remove the indent on the ul tags*/
-
 li {
   margin-top: 20px;
-  list-style-position: inside;
+  font-weight: 400;
+}
+
+hr {
+  color: #D8D8D8;
 }
 
 #advantagesList {
@@ -137,27 +148,44 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5% 15% 5% 15%;
+  padding: 5% 7.5% 5% 15%;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 #social {
   display: flex;
   align-items: center;
+  width: 35%;
 }
 
-@media all and (max-width: 800px) {
-  .navItem {
-    display: inline-block;
+#btns {
+  width: 100%;
+}
+
+.socialBtn {
+  margin-left: 10%;
+}
+
+@media all and (max-width: 1000px) {
+  .info {
+    margin: 10% 0;
   }
 
-  #tryBtn {
-    display: none;
+  #vpnActions {
+  margin-top: 5%;
   }
 
-  nav {
-    flex-wrap: wrap;
+  .bigImage {
+    padding-right: 10%;
   }
-  
+
+  .listDescription {
+    padding-right: 20%;
+  }
+}
+
+@media all and (max-width: 950px) {
   footer {
     flex-direction: column;
     text-align: center;
@@ -166,13 +194,54 @@ footer {
   .footerItem {
     margin-top: 20px;
   }
+
+  #social {
+    width: 33%;
+    /*white-space: wrap;*/
+    display: flex;
+    flex-direction: column;
+  }
+
+  #btns {
+    width: 100%;
+    padding-left: 15%;
+  }
+
+  .socialBtn {
+    margin-left: 5%;
+  }
+}
+
+
+@media all and (max-width: 800px) {
+  .navItem {
+    display: inline-block;
+  }
+
+  #tryBtn {
+    display: none;
+    /*white-space: nowrap;*/
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
 }
 
 @media all and (max-width: 700px) {
+  .info {
+    margin: 15% 0;
+  }
+
   .bigImage {
     float: none;
     display:block;
     margin:auto;
+    padding: 0 0 5% 0;
+  }
+
+  .listDescription {
+    padding: 0 0 5% 0;
   }
 
   #mainAbout {
@@ -185,7 +254,7 @@ footer {
 
   #aboutDetail {
     order: 2;
-  }
+  }  
 }
 
 @media all and (max-width: 650px) {
@@ -199,9 +268,31 @@ footer {
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 520px) {
   .menuItems {
     font-size: 14px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .listDescription {
+    text-align: center;
+  }
+
+  ul, li {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  li {
+    text-align: center;
+    list-style-position: inside;
+  }
+
+  #social {
+    width: 60%;
   }
 }
 
@@ -222,18 +313,6 @@ footer {
   .actionDetail {
     margin-left: 20px;
   }
-
-  li {
-    margin-left: 0;
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .listDescription {
-    text-align: center;
-  }
-
-
 }
 
 @media all and (max-width: 380px) {

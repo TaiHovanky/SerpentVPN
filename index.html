@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Golden Frog</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -44,21 +45,21 @@
           <img src='./assets/icon_infrastructure.svg' class='actionImg' />
           <div class='actionDetail'>
             <strong>Lock Down Cloud Infrastructure</strong>
-            <p>Reduce the number of attack vectors on your public cloud infrastructure.</p>
+            <p class='actionDescription'>Reduce the number of attack vectors on your public cloud infrastructure.</p>
           </div>
         </span>
         <span class='action' id='thirdParty'>
           <img src='./assets/icon_third_party.svg' class='actionImg' />
           <div class='actionDetail'>
             <strong>Protect Against Vulnerabilities</strong>
-            <p>Protect your cloud servers against scanning for open SSH vulnerabilities and logins.</p>
+            <p class='actionDescription'>Protect your cloud servers against scanning for open SSH vulnerabilities and logins.</p>
           </div>
         </span>
         <span class='action' id='vulnerabilities'>
           <img src='./assets/icon_vulnerabilities.svg' class='actionImg' />
           <div class='actionDetail'>
             <strong>Secure Third-Party Services</strong>
-            <p>Lock down access to third-party services, such as Salesforce, to your servers' static IP address.</p>
+            <p class='actionDescription'>Lock down access to third-party services, such as Salesforce, to your servers' static IP address.</p>
           </div>
         </span>   
       </section>
@@ -123,9 +124,11 @@
       <span class='footerItem'>COMPANY</span>
       <span class='footerItem'>SUPPORT</span>
       <span class='footerItem' id='social'>SOCIAL:
-        <img src='./assets/social_facebook.svg' />
-        <img src='./assets/social_twitter.svg' />
-        <img src='./assets/social_linkedin.svg' />
+        <span id='btns'>
+        <img class='socialBtn' src='./assets/social_facebook.svg' />
+        <img class='socialBtn' src='./assets/social_twitter.svg' />
+        <img class='socialBtn' src='./assets/social_linkedin.svg' />
+        </span>
       </span>
     </footer>
   </body>
