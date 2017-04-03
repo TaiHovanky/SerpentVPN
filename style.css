@@ -4,8 +4,14 @@ body {
 }
 
 nav {
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
+  -moz-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
   background-color: #F5F6F8;
   color: #666666;
@@ -26,8 +32,14 @@ nav {
 
 #menuItems {
   width: 60%;
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
+  -moz-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 
@@ -40,6 +52,8 @@ nav {
 }
 
 #mainAbout {
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
 }
 
@@ -48,7 +62,11 @@ nav {
 }
 
 .content {
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
+  -moz-flex-flow: column;
+  -webkit-flex-flow: column;
   flex-flow: column;
 }
 
@@ -90,16 +108,26 @@ strong {
 }
 
 #vpnActions {
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
+  -moz-flex-flow: row;
+  -webkit-flex-flow: row;
   flex-flow: row;
   margin-top: 3%;
   margin-bottom: 5%;
 }
 
 .action {
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
+  -moz-flex-flow: column;
+  -webkit-flex-flow: column;
   flex-flow: column;
   padding-right: 5%;
+  -moz-align-items: flex-start;
+  -webkit-align-items: flex-start;
   align-items: flex-start;
 }
 
@@ -121,8 +149,14 @@ li {
 footer {
   background-color: #3A3D40;
   color: #DDDDDD;
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
+  -moz-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
   padding: 5% 7.5% 5% 15%;
   font-weight: 700;
@@ -130,7 +164,11 @@ footer {
 }
 
 #social {
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
+  -moz-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
   width: 35%;
 }
@@ -149,7 +187,7 @@ footer {
   }
 
   #vpnActions {
-  margin-top: 5%;
+    margin-top: 5%;
   }
 
   .bigImage {
@@ -197,12 +235,14 @@ footer {
   }
 
   nav {
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   /*prevent nav items from being crammed together, get items to display under Serpent VPN logo*/
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 750px) {
   .info {
     margin: 15% 0;
   }
@@ -212,13 +252,18 @@ footer {
     display:block;
     margin:auto;
     padding: 0 0 5% 0;
+    max-height: 256px;
+    max-width: 256px;
   }
+  /*prevent re-sizing of image in Microsoft Edge*/
 
   .listDescription {
     padding: 0 0 5% 0;
   }
 
   #mainAbout {
+    -moz-flex-flow: column;
+    -webkit-flex-flow: column;
     flex-flow: column;
   }
 
@@ -232,12 +277,16 @@ footer {
   }
 
   footer {
+    -webkit-flex-direction: column;
     flex-direction: column;
     text-align: center;
   }
 
   #social {
+    display: -moz-flex;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
   }
   /*display social buttons underneath 'Social:'*/
@@ -250,6 +299,8 @@ footer {
 
   #menuItems {
     width: 85%;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
   }
 }
@@ -283,11 +334,16 @@ footer {
   }
 
   #vpnActions {
+    -webkit-flex-direction: column;
     flex-direction: column
   }
 
   .action {
+    display: -moz-flex;
+    display: -webkit-flex;
     display: flex;
+    -moz-flex-flow: row;
+    -webkit-flex-flow: row;
     flex-flow: row;
   }
   /*display .action content in a row instead of column*/
