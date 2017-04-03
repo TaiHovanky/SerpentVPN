@@ -1,5 +1,5 @@
 body {
-  font-family: "open-sans", "Open Sans", "Arial", "Helvetica", sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
 }
 
@@ -9,14 +9,9 @@ nav {
   align-items: center;
   background-color: #F5F6F8;
   color: #666666;
-  font-family: 'Open Sans', 'sans-serif';
   font-weight: 600;
   font-size: 16px;
   padding: 1.5% 1% 1.5% 5%;
-}
-
-.navItem {
-  flex-shrink: 4;
 }
 
 #tryBtn {
@@ -29,7 +24,7 @@ nav {
   white-space: nowrap;
 }
 
-.menuItems {
+#menuItems {
   width: 60%;
   display: flex;
   justify-content: space-between;
@@ -46,12 +41,10 @@ nav {
 
 #mainAbout {
   display: flex;
-
 }
 
 #logoCloud {
   order: 2;
-  float: none;
 }
 
 .content {
@@ -60,7 +53,6 @@ nav {
 }
 
 h1 {
-  font-family: 'Open Sans', 'sans-serif';
   font-weight: 300;
   font-size: 30px;
   color: #333333;
@@ -72,10 +64,11 @@ p {
 }
 
 .listDescription {
-  padding-right: 32%;
+  padding-right: 30%;
   font-size: 18px;
   margin-bottom: 0;
 }
+/*paragraphs before the lists*/
 
 strong {
   font-weight: 700;
@@ -93,28 +86,14 @@ strong {
 .bigImage {
   float: right;
   margin-top: 30px;
-  padding-right: 11%;
+  padding-right: 10%;
 }
 
 #vpnActions {
   display: flex;
   flex-flow: row;
   margin-top: 3%;
-}
-
-#vpnActions > #infrastructure {
-  flex: 1 6 20%;
-  order: 1;
-}
-
-#vpnActions > #thirdParty {
-  flex: 1 6 20%;
-  order: 2;
-}
-
-#vpnActions > #vulnerabilities {
-  flex: 1 6 20%;
-  order: 3;
+  margin-bottom: 5%;
 }
 
 .action {
@@ -132,10 +111,7 @@ strong {
 li {
   margin-top: 20px;
   font-weight: 400;
-}
-
-hr {
-  color: #D8D8D8;
+  list-style-type: disc;
 }
 
 #advantagesList {
@@ -177,7 +153,7 @@ footer {
   }
 
   .bigImage {
-    padding-right: 10%;
+    padding-right: 5%;
   }
 
   .listDescription {
@@ -187,8 +163,6 @@ footer {
 
 @media all and (max-width: 950px) {
   footer {
-    /*flex-direction: column;
-    text-align: center;*/
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -219,12 +193,13 @@ footer {
 
   #tryBtn {
     display: none;
-    /*white-space: nowrap;*/
+    white-space: nowrap;
   }
 
   nav {
     flex-wrap: wrap;
   }
+  /*prevent nav items from being crammed together, get items to display under Serpent VPN logo*/
 }
 
 @media all and (max-width: 700px) {
@@ -250,6 +225,7 @@ footer {
   #logoCloud {
     order: 1;
   }
+  /*display #logoCloud image on top of .listDescription paragraph*/
 
   #aboutDetail {
     order: 2;
@@ -264,6 +240,7 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  /*display social buttons underneath 'Social:'*/
 }
 
 @media all and (max-width: 650px) {
@@ -271,14 +248,14 @@ footer {
     padding: 1.5% 2% 1.5% 2%;
   }
 
-  .menuItems {
+  #menuItems {
     width: 85%;
     justify-content: space-between;
   }
 }
 
 @media all and (max-width: 520px) {
-  .menuItems {
+  #menuItems {
     font-size: 14px;
   }
 
@@ -294,6 +271,7 @@ footer {
     margin-left: 0;
     padding-left: 0;
   }
+  /*remove list indent*/
 
   li {
     text-align: center;
@@ -312,6 +290,7 @@ footer {
     display: flex;
     flex-flow: row;
   }
+  /*display .action content in a row instead of column*/
 
   .actionImg {
     margin-top: 5%;
@@ -322,12 +301,8 @@ footer {
   }
 }
 
-/*@media all and (max-width: 450px) {
-  
-}*/
-
 @media all and (max-width: 380px) {
-  .menuItems {
+  #menuItems {
     width: 90%;
     font-size: 12px;
   }
